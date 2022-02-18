@@ -7,3 +7,5 @@ const promise = new Promise(function (fulfill, reject) {
 
 promise.then(value => {console.log(value)});
 
+module.exports = promise;
+
