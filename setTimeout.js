@@ -1,7 +1,8 @@
-const timer = () => {
-    setTimeout(() => {
+const timer = (callback) => {
+  setTimeout(() => {
     console.log('TIMED OUT!');
-}, 1700);
-}
+    callback();
+  }, 1700);
+};
 
 module.exports = timer;

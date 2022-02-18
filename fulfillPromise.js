@@ -1,11 +1,14 @@
 require('es6-promise');
-const promise = new Promise(function (fulfill, reject) {
+const checkPromise = () => {
+  const promise = new Promise(function (fulfill, reject) {
     setTimeout(() => {
-    fulfill('FULFILLED!');
+      fulfill('FULFILLED!');
     },1700);
   });
+  return promise;
+};
 
-promise.then(value => {console.log(value)});
+checkPromise().then(value => {console.log(value);});
 
-module.exports = promise;
+module.exports = checkPromise;
 

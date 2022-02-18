@@ -1,14 +1,14 @@
-const promise = require('../fulFillPromise.js');
+const checkPromise = require('../fulFillPromise.js');
 
-describe('promise', function() {
-    it('should return the data FULFILLED!', () => {
-        promise.then(data => {
-          expect(data).toBe('FULFILLED!');
-        });
-      });
-    it('should not return any other data', () => {
-        promise.then(data => {
-          expect(data).not.toBe('NOT FULFILLED!');
-        });
-      });
+describe('checkPromise', function() {
+  test('should return the data FULFILLED!', () => {
+    return checkPromise().then(data => {
+      expect(data).toBe('FULFILLED!');
+    });
+  });
+  test('should not return any other data', () => {
+    return checkPromise().then(data => {
+      expect(data).not.toBe('NOT FULFILLED!');
+    });
+  });
 });
